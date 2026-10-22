@@ -66,13 +66,13 @@ Responsibilities:
 - Submit quiz answers
 - Retrieve quiz results
   
-3. Service Registry Uses Eureka Server for service discovery.
+3. Service Registry Uses Eureka Server for service discovery
 Services register themselves with Eureka so that they can communicate without relying on hard-coded service locations.
 
-4. API Gateway
+5. API Gateway
 Acts as the entry point for client requests and routes requests to the appropriate microservice.
 
-5. Service Communication
+7. Service Communication
 The services communicate using Spring Cloud OpenFeign.
 
 🛠️ Tech Stack
@@ -94,23 +94,6 @@ Tools
 - IntelliJ IDEA
 - Postman
 - Git & GitHub
-  
-📌 API Endpoints
-Question Service
-Method	Endpoint	Description
-GET	/question/allQuestions	Get all questions
-POST	/question/addQuestion	Add a new question
-GET	/question/category/{category}	Get questions by category
-GET	/question/generate	Generate random question IDs
-POST	/question/getQuestions	Get questions using their IDs
-POST	/question/GetScore	Calculate quiz score
-
-
-Quiz Service
-Method	Endpoint	Description
-POST	/quiz/create	Create a new quiz
-GET	/quiz/startQuiz/{id}	Start a quiz
-POST	/quiz/submit/{id}	Submit quiz answers
 
 ⚙️ Getting Started
 Prerequisites
@@ -125,13 +108,19 @@ Make sure you have installed:
 Create the required databases in PostgreSQL and update the database configuration in each service.
 
 Example:
+```
 spring.datasource.url=jdbc:postgresql://localhost:5432/questiondb
+
 spring.datasource.username=postgres
+
 spring.datasource.password=YOUR_PASSWORD
+```
 
 Do not commit passwords, API keys, or other secrets to GitHub.
 3. Start the services
+
 Start the services in the following order:
+
 1. Service Registry
 2. Question Service
 3. Quiz Service
