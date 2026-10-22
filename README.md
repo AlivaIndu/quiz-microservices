@@ -42,6 +42,7 @@ The system allows users to:
                  |
           Eureka Server
         (Service Discovery)
+```
 
 🧩 Microservices
 1. Question Service
