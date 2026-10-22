@@ -65,13 +65,14 @@ Responsibilities:
 - Retrieve questions when a quiz starts
 - Submit quiz answers
 - Retrieve quiz results
-3. Service Registry
-Uses Eureka Server for service discovery.
-
+  
+3. Service Registry Uses Eureka Server for service discovery.
 Services register themselves with Eureka so that they can communicate without relying on hard-coded service locations.
+
 4. API Gateway
 Acts as the entry point for client requests and routes requests to the appropriate microservice.
-🔄 Service Communication
+
+5. Service Communication
 The services communicate using Spring Cloud OpenFeign.
 
 🛠️ Tech Stack
@@ -84,13 +85,16 @@ Backend
 - Spring Cloud Netflix Eureka
 - REST APIs
 - Maven
+  
 Database
 - PostgreSQL
-- Hibernate / JPA
+- JPA
+  
 Tools
 - IntelliJ IDEA
 - Postman
 - Git & GitHub
+  
 📌 API Endpoints
 Question Service
 Method	Endpoint	Description
@@ -116,9 +120,6 @@ Make sure you have installed:
 - PostgreSQL
 - Git
 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/quiz-microservices.git
-
-cd quiz-microservices
 
 2. Configure PostgreSQL
 Create the required databases in PostgreSQL and update the database configuration in each service.
@@ -148,6 +149,7 @@ mvn spring-boot:run
 - Add unit and integration tests
 - Add API documentation using Swagger/OpenAPI
 - Add monitoring with Spring Boot Actuator
+  
 👩‍💻 Author
 Aliva Indu
 Computer Science & Engineering (Cyber Security)
